@@ -1,6 +1,11 @@
 import { Box, Paper, Button, TextField, Typography } from "@mui/material";
 import Link from "next/link";
 
+const style = {
+  linkStyle: {
+    fontSize: ".8rem",
+  },
+};
 export default function Register() {
   return (
     <Box
@@ -42,9 +47,11 @@ export default function Register() {
           Register Account
         </Button>
         <Box sx={{ display: "flex" }}>
-          <Typography>Already have Account?</Typography>
+          <Typography sx={style.linkStyle}>Already have Account?</Typography>
 
-          <Typography sx={{ color: "dodgerblue" }}>
+          <Typography
+            sx={{ color: "dodgerblue", fontSize: ".8rem", margintTop: "1rem" }}
+          >
             <Link href="/SignIn">Sign In</Link>
           </Typography>
         </Box>

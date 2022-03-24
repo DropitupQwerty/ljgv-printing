@@ -1,5 +1,32 @@
-import { Box, Paper, Typography, Checkbox } from '@mui/material';
+import { Box, Typography } from "@mui/material";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  return <Box>paep</Box>;
+  const router = useRouter();
+  const [isAuth, setAuth] = useState(true);
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (isAuth) {
+      alert("Full access");
+      setLoading(false);
+    } else {
+      router.push("/SignIn");
+    }
+  }, []);
+
+  if (isLoading || !isAuth) {
+    return (
+      <Box>
+        <Typography>Authenticating . . . . . . . .</Typography>
+      </Box>
+    );
+  } else {
+    return (
+      <Box>
+        <Typography>Full Access</Typography>
+      </Box>
+    );
+  }
 }

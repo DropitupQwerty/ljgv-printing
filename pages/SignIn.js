@@ -35,12 +35,17 @@ export default function SignIn() {
         <Button variant="contained" sx={{ marginTop: "1rem" }}>
           Register
         </Button>
-        <Typography sx={{ color: "dodgerblue", marginTop: "1rem" }}>
+        <Typography
+          sx={{
+            color: "dodgerblue",
+            marginTop: "1rem",
+            textAlign: "right",
+            fontSize: ".8rem",
+          }}
+        >
           <Link href="/register">Create Account?</Link>
         </Typography>
       </Paper>
-
-      <Box></Box>
     </Box>
   );
 }
