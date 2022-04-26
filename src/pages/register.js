@@ -18,9 +18,6 @@ export default function Register() {
         alignItems: "center",
       }}
     >
-      <Typography variant="h4" sx={{ color: "#333", fontWeight: "700" }}>
-        Register User
-      </Typography>
       <Paper
         elevation={3}
         sx={{
@@ -30,6 +27,12 @@ export default function Register() {
           marginTop: "1rem",
         }}
       >
+        <Typography
+          variant="h4"
+          sx={{ fontWeight: "700", marginBottom: "1rem", textAlign: "center" }}
+        >
+          Register User
+        </Typography>
         <TextField label="Email Address" name="email" type="email"></TextField>
         <TextField
           label="Password"
@@ -46,13 +49,18 @@ export default function Register() {
         <Button variant="contained" sx={{ marginTop: "1rem" }}>
           Register Account
         </Button>
-        <Box sx={{ display: "flex" }}>
-          <Typography sx={style.linkStyle}>Already have Account?</Typography>
-
-          <Typography
-            sx={{ color: "dodgerblue", fontSize: ".8rem", margintTop: "1rem" }}
-          >
-            <Link href="/SignIn">Sign In</Link>
+        <Box sx={{ marginTop: "1rem" }}>
+          <Typography sx={{ textAlign: "right", fontSize: ".8rem" }}>
+            Already have Account?
+            <Typography
+              sx={{
+                color: "dodgerblue",
+                marginLeft: ".2rem",
+                fontSize: " .8rem",
+              }}
+            >
+              <Link href="/sign-in"> Sign In</Link>
+            </Typography>
           </Typography>
         </Box>
       </Paper>
