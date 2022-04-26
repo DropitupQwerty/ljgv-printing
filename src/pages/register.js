@@ -1,11 +1,7 @@
 import { Box, Paper, Button, TextField, Typography } from "@mui/material";
 import Link from "next/link";
+import global from "../styles/global";
 
-const style = {
-  linkStyle: {
-    fontSize: ".8rem",
-  },
-};
 export default function Register() {
   return (
     <Box
@@ -46,7 +42,10 @@ export default function Register() {
           type="password"
           sx={{ marginTop: "1rem" }}
         ></TextField>
-        <Button variant="contained" sx={{ marginTop: "1rem" }}>
+        <Button
+          variant="contained"
+          sx={{ ...global.button1, marginTop: "1rem" }}
+        >
           Register Account
         </Button>
         <Box sx={{ marginTop: "1rem" }}>

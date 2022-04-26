@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import { useState } from "react";
+import global from "../styles/global";
 
 export default function SignIn() {
   const initialState = {
@@ -100,7 +101,11 @@ export default function SignIn() {
           onChange={handleChange("password")}
         ></TextField>
 
-        <Button variant="contained" sx={{ marginTop: "1rem" }} onClick={signIn}>
+        <Button
+          variant="contained"
+          sx={{ ...global.button1, marginTop: "1rem" }}
+          onClick={signIn}
+        >
           Sign In
         </Button>
         <Typography
