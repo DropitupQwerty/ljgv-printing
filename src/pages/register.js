@@ -1,6 +1,7 @@
 import { Box, Paper, Button, TextField, Typography } from "@mui/material";
 import Link from "next/link";
 import global from "../styles/global";
+import Head from "next/head";
 
 export default function Register() {
   return (
@@ -14,6 +15,10 @@ export default function Register() {
         alignItems: "center",
       }}
     >
+      <Head>
+        <title>Register</title>
+      </Head>
+
       <Paper
         elevation={3}
         sx={{

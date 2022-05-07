@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import global from "../styles/global";
+import Head from "next/head";
 
 export default function SignIn() {
   const initialState = {
@@ -72,6 +73,9 @@ export default function SignIn() {
         alignItems: "center",
       }}
     >
+      <Head>
+        <title>Sign-in Account</title>
+      </Head>
       <Paper
         elevation={3}
         sx={{
