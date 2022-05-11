@@ -4,10 +4,12 @@ import "../styles/globals.css";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 
 function MyApp({ Component, pageProps }) {
+  const getLayout = Component.getLayout || ((page) => page);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Component {...pageProps} />
+
+      {getLayout(<Component {...pageProps} />)}
     </ThemeProvider>
   );
 }
