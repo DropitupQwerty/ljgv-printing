@@ -9,7 +9,15 @@ const theme = createTheme({
     secondary: {
       main: "#333",
     },
-
+    dashboard: {
+      bg1: "#947EC3",
+      bg2: "#B689C0",
+      bg3: "#EC994B",
+    },
+    text: {
+      t1: "#333",
+      t2: "#fff",
+    },
   },
   typography: {
     fontFamily: [
