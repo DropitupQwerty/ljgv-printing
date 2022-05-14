@@ -50,7 +50,7 @@ export default function AdminLayout({ children }) {
             />
           </IconButton>
           <Typography sx={{ marginLeft: "1rem" }}>
-            LJGV MERCHANDISE ONLINE SHOP
+            MERLY LONGANISA MERCHANDISE
           </Typography>
         </Toolbar>
       </AppBar>

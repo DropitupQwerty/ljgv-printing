@@ -1,7 +1,16 @@
+import { Button, Link } from "@mui/material";
 import React from "react";
+import { useRouter } from "next/router";
 
 export default function index() {
-  return <h1> index</h1>;
+  const router = useRouter();
+  const drawerGotoPage = (url) => {
+    router.push(url);
+  };
+
+  return (
+    <Button onClick={() => drawerGotoPage("/dashboard")}> Click me</Button>
+  );
 }
 {
   /* <Typography>

@@ -41,19 +41,19 @@ export default function Dashboard() {
       <Grid container spacing={2} sx={{ marginTop: "12px" }}>
         <Grid item xs={12} sm={4}>
           <Paper sx={style.paper1}>
-            <Typography variant="h7"> Users</Typography>
+            <Typography variant="h7"> WILD FLAVOR</Typography>
             <Typography variant="h5" sx={style.BoldText}>
               {" "}
-              299
+              299 pesos
             </Typography>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={4}>
           <Paper sx={style.paper2}>
-            <Typography variant="h7"> Appointments</Typography>
+            <Typography variant="h7"> BAWANG FALVOR</Typography>
             <Typography variant="h5" sx={style.BoldText}>
               {" "}
-              12
+              15 pesos
             </Typography>
           </Paper>
         </Grid>
@@ -62,7 +62,7 @@ export default function Dashboard() {
             <Typography variant="h7"> Orders</Typography>
             <Typography variant="h5" sx={style.BoldText}>
               {" "}
-              10
+              10 pesos
             </Typography>
           </Paper>
         </Grid>
