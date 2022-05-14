@@ -1,8 +1,7 @@
 import { Button, Link } from "@mui/material";
-import React from "react";
 import { useRouter } from "next/router";
 
-export default function index() {
+export default function Index() {
   const router = useRouter();
   const drawerGotoPage = (url) => {
     router.push(url);
