@@ -1,7 +1,6 @@
 import { Box, Grid, Typography, Paper } from "@mui/material";
-import React from "react";
 import AdminLayout from "../components/AdminLayout";
-import theme from "../utils/theme";
+import Image from "next/image";
 
 export default function Dashboard() {
   const style = {
@@ -28,29 +27,40 @@ export default function Dashboard() {
 
   return (
     <Box sx={{ padding: "0 24px" }}>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm>
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Image
+          src="/assets/svg/dashboard.svg"
+          alt="dashboard"
+          width={30}
+          height={30}
+        />
+        <Typography variant="h5" sx={{ marginLeft: "12px" }}>
+          Dashboard
+        </Typography>
+      </Box>
+      <Grid container spacing={2} sx={{ marginTop: "12px" }}>
+        <Grid item xs={12} sm={4}>
           <Paper sx={style.paper1}>
-            <Typography variant="h6"> Users</Typography>
-            <Typography variant="h4" sx={style.BoldText}>
+            <Typography variant="h7"> Users</Typography>
+            <Typography variant="h5" sx={style.BoldText}>
               {" "}
               299
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm>
+        <Grid item xs={12} sm={4}>
           <Paper sx={style.paper2}>
-            <Typography variant="h6"> Appointments</Typography>
-            <Typography variant="h4" sx={style.BoldText}>
+            <Typography variant="h7"> Appointments</Typography>
+            <Typography variant="h5" sx={style.BoldText}>
               {" "}
               12
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm>
+        <Grid item xs={12} sm={4}>
           <Paper sx={style.paper3}>
-            <Typography variant="h6"> Orders</Typography>
-            <Typography variant="h4" sx={style.BoldText}>
+            <Typography variant="h7"> Orders</Typography>
+            <Typography variant="h5" sx={style.BoldText}>
               {" "}
               10
             </Typography>
