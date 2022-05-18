@@ -10,7 +10,7 @@ const theme = createTheme({
       main: '#333',
     },
     dashboard: {
-      bg1: '#fffff',
+      bg1: '#947EC3',
       bg2: '#B689C0',
       bg3: '#EC994B',
     },
