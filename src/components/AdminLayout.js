@@ -12,12 +12,12 @@ import {
   Divider,
   Avatar,
   Tooltip,
-} from "@mui/material";
-import Image from "next/image";
-import Head from "next/head";
-import { useRouter } from "next/router";
+} from '@mui/material';
+import Image from 'next/image';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function AdminLayout({ children }) {
   const router = useRouter();
@@ -49,7 +49,7 @@ export default function AdminLayout({ children }) {
               height={30}
             />
           </IconButton>
-          <Typography sx={{ marginLeft: "1rem" }}>
+          <Typography sx={{ marginLeft: '1rem' }}>
             MERLY LONGANISA MERCHANDISE
           </Typography>
         </Toolbar>
@@ -57,17 +57,17 @@ export default function AdminLayout({ children }) {
       <Drawer anchor="left" open={open} onClose={handleClose}>
         <Box
           sx={{
-            minWidth: "200px",
-            display: "flex",
-            flexDirection: "column",
-            height: "100vh",
+            minWidth: '200px',
+            display: 'flex',
+            flexDirection: 'column',
+            height: '100vh',
           }}
         >
-          <Box sx={{ padding: "16px", display: "flex" }}>
+          <Box sx={{ padding: '16px', display: 'flex' }}>
             <Avatar />
-            <Box sx={{ marginLeft: "8px" }}>
+            <Box sx={{ marginLeft: '8px' }}>
               <Tooltip title="JacobAllenValderama@gmail.com">
-                <Typography color="secondary" noWrap sx={{ maxWidth: "150px" }}>
+                <Typography color="secondary" noWrap sx={{ maxWidth: '150px' }}>
                   JacobAllenVaderama@gmail.com
                 </Typography>
               </Tooltip>
@@ -75,12 +75,12 @@ export default function AdminLayout({ children }) {
               <Typography color="primary">Admin</Typography>
             </Box>
           </Box>
-          <List sx={{ flexGrow: "1" }}>
+          <List sx={{ flexGrow: '1' }}>
             <Divider />
             <ListItem
               button
-              onClick={() => drawerGotoPage("/dashboard")}
-              selected={router.pathname.includes("/dashboard")}
+              onClick={() => drawerGotoPage('/dashboard')}
+              selected={router.pathname.includes('/dashboard')}
             >
               <ListItemIcon>
                 <Image
@@ -94,8 +94,8 @@ export default function AdminLayout({ children }) {
             </ListItem>
             <ListItem
               button
-              onClick={() => drawerGotoPage("/users")}
-              selected={router.pathname.includes("/users")}
+              onClick={() => drawerGotoPage('/users')}
+              selected={router.pathname.includes('/users')}
             >
               <ListItemIcon>
                 <Image
@@ -107,7 +107,11 @@ export default function AdminLayout({ children }) {
               </ListItemIcon>
               <ListItemText primary="Users" />
             </ListItem>
-            <ListItem button>
+            <ListItem
+              button
+              onClick={() => drawerGotoPage('/messages')}
+              selected={router.pathname.includes('/messages')}
+            >
               <ListItemIcon>
                 <Image
                   src="/assets/svg/chat.svg"
@@ -118,7 +122,11 @@ export default function AdminLayout({ children }) {
               </ListItemIcon>
               <ListItemText primary="Messages" />
             </ListItem>
-            <ListItem button>
+            <ListItem
+              button
+              onClick={() => drawerGotoPage('/appointment')}
+              selected={router.pathname.includes('/appointment')}
+            >
               <ListItemIcon>
                 <Image
                   src="/assets/svg/appointment.svg"
@@ -129,7 +137,11 @@ export default function AdminLayout({ children }) {
               </ListItemIcon>
               <ListItemText primary="Appointments" />
             </ListItem>
-            <ListItem button>
+            <ListItem
+              button
+              onClick={() => drawerGotoPage('/settings')}
+              selected={router.pathname.includes('/settings')}
+            >
               <ListItemIcon>
                 <Image
                   src="/assets/svg/settings.svg"
@@ -155,7 +167,7 @@ export default function AdminLayout({ children }) {
         </Box>
       </Drawer>
 
-      <Box sx={{ marginTop: "90px" }}>{children}</Box>
+      <Box sx={{ marginTop: '90px' }}>{children}</Box>
     </Box>
   );
 }
