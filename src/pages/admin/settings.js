@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import AdminLayout from '../components/AdminLayout';
+import AdminLayout from "../../components/AdminLayout";
 
 export default function Settings() {
   return (

@@ -4,7 +4,7 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#5D3FD3',
+      main: '#F66B0E',
     },
     secondary: {
       main: '#333',
@@ -34,5 +34,15 @@ const theme = createTheme({
     ].join(','),
   },
 });
+// Aqua
+// #04ECF0
 
+// Turquoise
+// #04D4F0
+
+// Cyan
+// #6AF2F0
+
+// Blue Grotto
+// #059DC0
 export default theme;

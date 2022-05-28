@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
-import AdminLayout from '../components/AdminLayout';
+import AdminLayout from "../../components/AdminLayout";
 
 export default function Messages() {
   return (

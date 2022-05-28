@@ -1,7 +1,7 @@
 const global = {
   button1: {
-    borderRadius: "20px",
-    textTransform: " none",
+    borderRadius: '20px',
+    textTransform: ' none',
   },
 };
 
