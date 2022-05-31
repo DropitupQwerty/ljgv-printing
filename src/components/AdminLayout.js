@@ -117,10 +117,16 @@ export default function AdminLayout({ children }) {
             display: 'flex',
             flexDirection: 'column',
             height: '100vh',
-            color: '#F66B0E',
+            color: '#EB5353',
           }}
         >
-          <DrawerHeader sx={{ background: '#F66B0E' }}>
+          <DrawerHeader sx={{ display: 'flex' }}>
+            <Image
+              src="../assets/svg/logo.svg"
+              alt="ljgv logo"
+              width={40}
+              height="40"
+            ></Image>
             <Button
               aria-label="back-btn"
               sx={{
@@ -139,13 +145,10 @@ export default function AdminLayout({ children }) {
               />
             </Button>
           </DrawerHeader>
+          <Divider />
 
           <List sx={{ flexGrow: '1' }}>
-            <ListItem
-              button
-              onClick={() => drawerGotoPage('/admin/')}
-              selected={router.pathname.includes('/admin/index.js')}
-            >
+            <ListItem button onClick={() => drawerGotoPage('/admin')}>
               <ListItemIcon>
                 <Image
                   src="../assets/svg/dashboard.svg"
@@ -175,7 +178,7 @@ export default function AdminLayout({ children }) {
             <ListItem
               button
               onClick={() => drawerGotoPage('/admin/messages')}
-              selected={router.pathname.includes('/admin/messages')}
+              selected={router.pathname.includes('/admin/orders')}
             >
               <ListItemIcon>
                 <Image
@@ -189,8 +192,23 @@ export default function AdminLayout({ children }) {
             </ListItem>
             <ListItem
               button
-              onClick={() => drawerGotoPage('/admin/appointment')}
-              selected={router.pathname.includes('/admin/appointment')}
+              onClick={() => drawerGotoPage('/admin/pending-orders')}
+              selected={router.pathname.includes('/admin/pending-orders')}
+            >
+              <ListItemIcon>
+                <Image
+                  src="../assets/svg/chat.svg"
+                  alt="chats"
+                  width="20"
+                  height={20}
+                />
+              </ListItemIcon>
+              <ListItemText primary="Pending Orders" />
+            </ListItem>
+            <ListItem
+              button
+              onClick={() => drawerGotoPage('/admin/order')}
+              selected={router.pathname.includes('/admin/order')}
             >
               <ListItemIcon>
                 <Image
@@ -200,7 +218,7 @@ export default function AdminLayout({ children }) {
                   height={20}
                 />
               </ListItemIcon>
-              <ListItemText primary="Appointments" />
+              <ListItemText primary="Orders" />
             </ListItem>
             <ListItem
               button

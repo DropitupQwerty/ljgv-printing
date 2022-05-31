@@ -1,8 +1,11 @@
 import { Box, Grid, Typography, Paper } from '@mui/material';
 import AdminLayout from '../../components/AdminLayout';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Dashboard() {
+  const router = useRouter();
   const style = {
     paper1: {
       color: (theme) => theme.palette.text.t2,
@@ -24,6 +27,9 @@ export default function Dashboard() {
       fontWeight: '700',
     },
   };
+  const drawerGotoPage = (url) => {
+    router.push(url);
+  };
 
   return (
     <Box sx={{ padding: '0 24px' }}>
@@ -40,7 +46,11 @@ export default function Dashboard() {
       </Box>
       <Grid container spacing={2} sx={{ marginTop: '12px' }}>
         <Grid item xs={12} sm={4}>
-          <Paper sx={style.paper1}>
+          <Paper
+            sx={style.paper1}
+            button
+            onClick={() => drawerGotoPage('/admin')}
+          >
             <Typography variant="h7">Users</Typography>
             <Typography variant="h5" sx={style.BoldText}>
               299
@@ -48,7 +58,11 @@ export default function Dashboard() {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Paper sx={style.paper2}>
+          <Paper
+            sx={style.paper2}
+            button
+            onClick={() => drawerGotoPage('/admin/orders')}
+          >
             <Typography variant="h7">Orders</Typography>
             <Typography variant="h5" sx={style.BoldText}>
               15
@@ -56,7 +70,11 @@ export default function Dashboard() {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Paper sx={style.paper3}>
+          <Paper
+            sx={style.paper3}
+            button
+            onClick={() => drawerGotoPage('/admin/pending-orders')}
+          >
             <Typography variant="h7">Pending Orders</Typography>
             <Typography variant="h5" sx={style.BoldText}>
               10
