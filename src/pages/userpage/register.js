@@ -1,18 +1,18 @@
-import { Box, Paper, Button, TextField, Typography } from "@mui/material";
-import Link from "next/link";
-import global from "../styles/global";
-import Head from "next/head";
+import { Box, Paper, Button, TextField, Typography } from '@mui/material';
+import Link from 'next/link';
+import global from '../../styles/global';
+import Head from 'next/head';
 
 export default function Register() {
   return (
     <Box
       sx={{
-        width: "100vw",
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Head>
@@ -22,15 +22,15 @@ export default function Register() {
       <Paper
         elevation={3}
         sx={{
-          padding: "24px",
-          display: " flex ",
-          flexDirection: "Column",
-          marginTop: "1rem",
+          padding: '24px',
+          display: ' flex ',
+          flexDirection: 'Column',
+          marginTop: '1rem',
         }}
       >
         <Typography
           variant="h4"
-          sx={{ fontWeight: "700", marginBottom: "1rem", textAlign: "center" }}
+          sx={{ fontWeight: '700', marginBottom: '1rem', textAlign: 'center' }}
         >
           Register User
         </Typography>
@@ -39,28 +39,28 @@ export default function Register() {
           label="Password"
           name="password"
           type="password"
-          sx={{ marginTop: "1rem" }}
+          sx={{ marginTop: '1rem' }}
         ></TextField>
         <TextField
           label="Confirm Password"
           name="ConfimPassword"
           type="password"
-          sx={{ marginTop: "1rem" }}
+          sx={{ marginTop: '1rem' }}
         ></TextField>
         <Button
           variant="contained"
-          sx={{ ...global.button1, marginTop: "1rem" }}
+          sx={{ ...global.button1, marginTop: '1rem' }}
         >
           Register Account
         </Button>
-        <Box sx={{ marginTop: "1rem" }}>
-          <Typography sx={{ textAlign: "right", fontSize: ".8rem" }}>
+        <Box sx={{ marginTop: '1rem' }}>
+          <Typography sx={{ textAlign: 'right', fontSize: '.8rem' }}>
             Already have Account?
             <Typography
               sx={{
-                color: "dodgerblue",
-                marginLeft: ".2rem",
-                fontSize: " .8rem",
+                color: 'dodgerblue',
+                marginLeft: '.2rem',
+                fontSize: ' .8rem',
               }}
             >
               <Link href="/sign-in"> Sign In</Link>
