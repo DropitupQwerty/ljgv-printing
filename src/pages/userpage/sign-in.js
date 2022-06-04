@@ -6,22 +6,22 @@ import {
   Typography,
   Snackbar,
   Alert,
-} from "@mui/material";
-import Link from "next/link";
-import { useState } from "react";
-import global from "../styles/global";
-import Head from "next/head";
+} from '@mui/material';
+import Link from 'next/link';
+import { useState } from 'react';
+import global from '../../styles/global';
+import Head from 'next/head';
 
 export default function SignIn() {
   const initialState = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   };
 
   const [state, setState] = useState(initialState);
   const messageInitialState = {
-    text: "",
-    severity: "success",
+    text: '',
+    severity: 'success',
   };
   const [message, setMessage] = useState(messageInitialState);
 
@@ -38,25 +38,25 @@ export default function SignIn() {
   };
 
   const signIn = () => {
-    const admin = "j@email.com";
-    const password = "jacob123";
+    const admin = 'j@email.com';
+    const password = 'jacob123';
 
     if (state.email === admin && state.password === password) {
       setMessage({
-        text: "Login Succesfully",
-        severity: "success",
+        text: 'Login Succesfully',
+        severity: 'success',
       });
       setOpen(true);
     } else if (state.email.length === 0 || state.password.length === 0) {
       setMessage({
-        text: "Input something in password or email BAKAA!!!",
-        severity: "warning",
+        text: 'Input something in password or email BAKAA!!!',
+        severity: 'warning',
       });
       setOpen(true);
     } else {
       setMessage({
-        text: "Error Desu . Bakaa!!!",
-        severity: "error",
+        text: 'Error Desu . Bakaa!!!',
+        severity: 'error',
       });
       setOpen(true);
     }
@@ -65,12 +65,12 @@ export default function SignIn() {
   return (
     <Box
       sx={{
-        width: "100vw",
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Head>
@@ -79,15 +79,15 @@ export default function SignIn() {
       <Paper
         elevation={3}
         sx={{
-          padding: "24px",
-          display: " flex ",
-          flexDirection: "Column",
-          marginTop: "1rem",
+          padding: '24px',
+          display: ' flex ',
+          flexDirection: 'Column',
+          marginTop: '1rem',
         }}
       >
         <Typography
           variant="h4"
-          sx={{ marginBottom: "1rem", fontWeight: "700", textAlign: "center" }}
+          sx={{ marginBottom: '1rem', fontWeight: '700', textAlign: 'center' }}
         >
           User Login
         </Typography>
@@ -95,36 +95,36 @@ export default function SignIn() {
           label="Email Address"
           name="email"
           type="email"
-          onChange={handleChange("email")}
+          onChange={handleChange('email')}
         ></TextField>
         <TextField
           label="Password"
           name="password"
           type="password"
-          sx={{ marginTop: "1rem" }}
-          onChange={handleChange("password")}
+          sx={{ marginTop: '1rem' }}
+          onChange={handleChange('password')}
         ></TextField>
 
         <Button
           variant="contained"
-          sx={{ ...global.button1, marginTop: "1rem" }}
+          sx={{ ...global.button1, marginTop: '1rem' }}
           onClick={signIn}
         >
           Sign In
         </Button>
         <Typography
           sx={{
-            color: "dodgerblue",
-            marginTop: "1rem",
-            textAlign: "right",
-            fontSize: ".8rem",
+            color: 'dodgerblue',
+            marginTop: '1rem',
+            textAlign: 'right',
+            fontSize: '.8rem',
           }}
         >
           <Link href="/register">Create Account?</Link>
         </Typography>
       </Paper>
       <Snackbar
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
