@@ -9,8 +9,9 @@ import {
 } from '@mui/material';
 import Link from 'next/link';
 import { useState } from 'react';
-import global from '../../styles/global';
+import global from '../styles/global';
 import Head from 'next/head';
+import LoginRegisterAB from '../components/loginRegisterAB';
 
 export default function SignIn() {
   const initialState = {
@@ -70,7 +71,7 @@ export default function SignIn() {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'flex-end',
       }}
     >
       <Head>
@@ -81,8 +82,9 @@ export default function SignIn() {
         sx={{
           padding: '24px',
           display: ' flex ',
-          flexDirection: 'Column',
+          flexDirection: 'column',
           marginTop: '1rem',
+          ...global.paper1,
         }}
       >
         <Typography
@@ -136,3 +138,7 @@ export default function SignIn() {
     </Box>
   );
 }
+
+SignIn.getLayout = function getLayout(page) {
+  return <LoginRegisterAB>{page}</LoginRegisterAB>;
+};
